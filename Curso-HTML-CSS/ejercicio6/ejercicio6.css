@@ -1,13 +1,17 @@
+body {
+    display:flex;
+    
+}
+
 .boton:hover {
     background-color: green;
     color: white;
 } 
 
-.boton::placeholder {
-    color:red;
+.boton::before{
+    content:"Pasa por encima"
 }
 
-.boton:after{
-    content:attr(title)
-    
+.boton:hover::before{
+    content:"Hecho!"
 }
