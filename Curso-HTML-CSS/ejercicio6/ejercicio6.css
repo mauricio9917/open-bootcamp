@@ -1,0 +1,13 @@
+.boton:hover {
+    background-color: green;
+    color: white;
+} 
+
+.boton::placeholder {
+    color:red;
+}
+
+.boton:after{
+    content:attr(title)
+    
+}
