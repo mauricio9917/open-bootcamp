@@ -1,0 +1,12 @@
+.btn-modern:hover {
+    animation: traslation 0.4s;
+}
+
+@keyframes traslation {
+    100%{
+        background-color:aqua;
+        color:red;
+        border-bottom: 5px solid blue;
+        transform:translateX(0%) translateY(-5%);
+    }
+}
