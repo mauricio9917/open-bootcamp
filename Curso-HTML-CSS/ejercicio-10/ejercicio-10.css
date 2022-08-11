@@ -1,0 +1,32 @@
+.contenedor {
+    display:grid;
+    gap:0.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.barra {
+    border:1px solid #222;
+}
+
+.item {
+    padding: 10px;
+    border: 2px solid gray;
+}
+
+.item1 {
+    grid-column-start: 3;
+    flex-grow:initial;
+}
+
+.barra{
+    grid-column-end: 1;
+}
+
+@media (max-width:640px){
+    .barra {
+        display:flex;
+        flex-direction:row;
+        bottom: 10vw;
+    }
+}
