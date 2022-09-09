@@ -2,12 +2,12 @@
 
 const fib = function(n) {
     let arrayFibo = []
-    const sol = [0, 1]
+    const num = [0, 1]
 
     for (let i = 2; i<= n; i++) {
-        sol[i] = sol[i -1] + sol[i - 2]
+        num[i] = num[i -1] + num[i - 2]
     }
-    arrayFibo = [...arrayFibo, sol]
+    arrayFibo = [...arrayFibo, num]
     return arrayFibo;
 }
 
