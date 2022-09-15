@@ -2,15 +2,16 @@
   <head>
     <title>Add Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./index.js"></script>
+    <link href="style.css" />
+    <script type="module" src="index.js"></script>
   </head>
   <body>
     <h3>My Google Maps Demo</h3>
     <div id="map"></div>
+  </body>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDae1OI9WmunpgOzBmZFSY3VOabO-_EZ70&callback=initMap&v=weekly"
-      defer
+      async
     ></script>
-  </body>
+  <script src="index.js"></script>
 </html>
