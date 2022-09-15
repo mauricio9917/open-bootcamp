@@ -17,14 +17,6 @@ parrafos.forEach(parrafo => {
         
     })
 
-    parrafo.addEventListener("remove", event => {
-            event.preventDefault()
-            event.dataTransfer.setData("id", parrafo.id)
-            const elemento_fantasma = document.querySelector(".imagen-fantasma") 
-            event.dataTransfer.setDragImage(elemento_fantasma,0,0)
-            document.getElementById(event.dataTransfer.getData("id")).remove()
-    })
-
 })
 
 secciones.forEach(seccion => {
@@ -42,10 +34,17 @@ secciones.forEach(seccion => {
         seccion.appendChild(parrafo)
     })
 
-    seccion.addEventListener("remove", event => {
-        const id_parrafo = event.dataTransfer.getData("id")
-        const parrafo = document.getElementById(id_parrafo)
-        seccion.popChild(parrafo)
-    })
+})
+
+const papelera = document.querySelector(".papelera")
+
+papelera.addEventListener("dragover", event => {
+    event.preventDefault()
+    event.dataTransfer.dropEffect = "copy"
+})
+
+papelera.addEventListener("drop", event => {
+    const id_parrafo = event.dataTransfer.getData("id")
+    document.getElementById(id_parrafo).remove()
 })
 
