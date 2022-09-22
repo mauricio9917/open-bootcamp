@@ -17,7 +17,7 @@ const Clock = () => {
             actualiceUser()
         }, 1000)
         return () => {
-            cleanInterval(intervalAge)
+            clearInterval(intervalAge)
         };
     })
 
