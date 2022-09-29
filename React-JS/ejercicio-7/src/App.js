@@ -16,7 +16,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <ComponenteA contacto={contactoPrueba} />
       </header> */}
-      <ContactListComponent></ContactListComponent>
+      <Contact></Contact>
     </div>
   );
 }
